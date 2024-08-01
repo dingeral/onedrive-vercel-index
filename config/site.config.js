@@ -26,14 +26,23 @@ module.exports = {
   // Do note that this is limited up to 200 items by the upstream OneDrive API.
   maxItems: 100,
 
-  // [OPTIONAL] We use Google Fonts natively for font customisations.
-  // You can check and generate the required links and names at https://fonts.google.com.
-  // googleFontSans - the sans serif font used in onedrive-vercel-index.
-  googleFontSans: 'Inter',
-  // googleFontMono - the monospace font used in onedrive-vercel-index.
-  googleFontMono: 'Fira Mono',
-  // googleFontLinks -  an array of links for referencing the google font assets.
-  googleFontLinks: ['https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter:wght@400;500;700&display=swap'],
+// [OPTIONAL] We use system fonts natively for font customisations.
+// You can customize the system font names as needed.
+// systemFontSans - the sans serif font used in onedrive-vercel-index.
+const systemFontSans = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif';
+
+// systemFontMono - the monospace font used in onedrive-vercel-index.
+const systemFontMono = 'Menlo, Monaco, "Courier New", Courier, monospace';
+
+// Use system fonts instead of Google Fonts
+const googleFontSans = systemFontSans;
+const googleFontMono = systemFontMono;
+const googleFontLinks = []; // Empty array since we're not using Google Fonts
+
+// Example usage:
+console.log(`Sans-serif font: ${googleFontSans}`);
+console.log(`Monospace font: ${googleFontMono}`);
+
 
   // [OPTIONAL] The footer component of your website. You can write HTML here, but you need to escape double
   // quotes - changing " to \". You can write anything here, and if you like badges, generate some with https://shields.io
